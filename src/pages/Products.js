@@ -8,10 +8,6 @@ function Products() {
   const products = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    console.log(products);
-  }, [products])
-
   const handleRatingChange = (index, newRating) => {
     if (newRating < 0) {
       newRating = 0;
